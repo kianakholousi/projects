@@ -1,0 +1,6 @@
+install python 
+install pip
+pip install requests & requests-oauthlib & tweepy 
+set bearer token in terminal environment variables
+authenticate using bearer token
+connect to twitter api v2 end point (tweepy client)

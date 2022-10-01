@@ -1,0 +1,8 @@
+name = input("please enter your name ")
+print("Hello "+name)
+print("enter 2 whole numbers")
+x=int(input())
+y=int(input())
+print("sum =",x+y)
+print(x,y,x+y,x*y)
+print("python is fun\n" + "i like \" \' \\ learing python" + str(x))
