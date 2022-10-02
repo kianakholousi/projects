@@ -38,14 +38,16 @@ public class SquareMatrix {
 
  
 	public static void main(String[] args) {
-		int m = 5;
-		int n = 5;
+		
 		int mat[][] = { 
 				{ 11, 12, 13, 14 , 15 },  
 				{ 21, 22, 23, 24 , 25 },
 				{ 31, 32, 33, 34 , 35 },
 				{ 41, 42, 43, 44 , 45 },
 				{ 51, 52, 53, 54 , 55 }};
+		int m = mat.length;
+		int n = mat[0].length;
+		System.out.printf("number of rows:%d number of columns:%d \n",m,n);
 		int maxPathLenght = m + n - 1;
 		paths(mat, m, n, 0, 0, new int[maxPathLenght], 0);
 	}
