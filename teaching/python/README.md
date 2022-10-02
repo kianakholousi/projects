@@ -1,7 +1,7 @@
 # python
  this repository contains:
  
- a pdf file of topics covered
+ a pdf file ofthe syllabus
  
  a PowerPoint made by me for teaching beginner python
  
