@@ -1,9 +1,9 @@
 # python
  this repository contains:
  
- a pdf file of topics covered
+ + pdf file of the syllabus
  
- a PowerPoint made by me for teaching beginner python
+ + PowerPoint made by me for teaching beginner python
  
  code bits to help understand and work with python first hand
  
