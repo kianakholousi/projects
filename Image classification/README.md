@@ -1,5 +1,6 @@
 # Image Classification using Graph-Based Features
 This project focuses on image classification using graph-based features extracted from images. The process involves extracting nodes(keypoints/superpixel centroids) from images, building graphs based on Euclidean distance/intensity/color dominance of these nodes, extracting features, and applying various machine learning algorithms for classification.
+
 ## Installation
 
 To use this project, you need to have the following dependencies installed:
@@ -64,8 +65,6 @@ graph4 = graph_dominant_colorK(keypoints,K_dominant_colors,threshold)
 graph6 = graph_dominant_colorS(superpixels_centroids,S_dominant_colorss,threshold)
 ```
 
-
-
 ### Visualization
 
 You can visualize the constructed graph using the `nx.draw` function from the `networkx` library.
@@ -74,10 +73,12 @@ You can visualize the constructed graph using the `nx.draw` function from the `n
 nx.draw(graph)
 plt.show()
 ```
+## Data set
+The project is tested on the "wangdataset.zip" data set, which can be downloaded from the following link: https://www.kaggle.com/datasets/ambarish/wangdataset.
 
 ## Example Output
 
-To view the outcome of a trial sample containing 100 images, simply execute the `justML.py` code.
+To view the outcome of a trial sample containing 100 images, simply execute the `justML.py` code on with the existing csv files.
 ![image](https://github.com/kianakholousi/projects/assets/44377174/3cdda121-13eb-4477-8d56-e682aeca4020)
 
 sample image 
@@ -89,10 +90,6 @@ superpixels
 ![keypoints](https://github.com/kianakholousi/projects/assets/44377174/826f0be2-224e-4dfd-9e67-0f13dc03aaed)
 
 keypoints
-
-
-
-
 
 
 graphs of the first image of a sample test (100 images):

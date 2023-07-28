@@ -1,6 +1,0 @@
-make new bot with BotFather and set description, about, and profile picture
-install python , pip
-add python to environment variable
-python -m pip install requests
-connect your Bot and OpenWeatherMap API
-execute code
