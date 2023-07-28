@@ -19,7 +19,7 @@ def getChatId(update):          return update["message"]["chat"]["id"]
 def getUpId(update):            return int(update["update_id"])
 def getResult(updates):         return updates["result"]
 
-# # Lambda functions to parse weather responses
+# Lambda functions to parse weather responses
 def getDesc(w):                 return w["weather"][0]["description"]
 def getTemp(w):                 return w["main"]["temp"]
 def getCity(w):                 return w["name"]
