@@ -1,9 +1,83 @@
+# Image Classification using Graph-Based Features
+This project focuses on image classification using graph-based features extracted from images. The process involves extracting nodes(keypoints/superpixel centroids) from images, building graphs based on Euclidean distance/intensity/color dominance of these nodes, extracting features, and applying various machine learning algorithms for classification.
+## Installation
 
-Image classification
-Converting images to graphs(nodes: keypoints/superpixel centroids, edges based on Euclidean distance/intensity/color dominance of nodes), extracting features,
-then using ten machine learning algorithms to classify images to compare and find the best ML algorithm and graph construction method for image classification.
-libs: numpy, pandas, matplotlib, cv2(opencv), networkx(graph), sklearn, skimage.
+To use this project, you need to have the following dependencies installed:
 
+- pandas
+- numpy
+- OpenCV
+- networkx
+- scikit-image
+- scikit-learn
+- category_encoders
+- matplotlib
+
+You can install these dependencies by running the following command:
+
+```
+pip install -r requirements.txt
+```
+
+## Usage
+
+The project provides several functions for image processing and graph analysis. Here's an overview of the main functionalities:
+
+### Superpixel Segmentation
+
+The `slic_segmentation` function performs superpixel segmentation on an input image. It uses the SLIC algorithm to divide the image into compact and visually meaningful segments.
+
+```python
+segments = slic_segmentation(image, n_segments=250, compactness=10, sigma=1, start_label=1)
+```
+
+### Keypoint Extraction
+
+The `keypoint_extraction` function extracts keypoints from an input image using the SIFT algorithm. It returns a list of keypoints detected in the image.
+
+```python
+keypoints = sift.detect(gray, None)
+```
+
+### Graph Construction
+
+The project provides three different methods for graph construction based on different image features:
+
+- **Euclidean distance**: constructing a graph based on the Euclidean distance of nodes.
+
+```python
+graph1 = graph_euclidean(superpixels_centroids)
+graph2 = graph_euclidean(keypoints)
+```
+
+- **Intensity**: constructing a graph based on the similarity of intensities between nodes.
+
+```python
+graph3 = graph_intensityK(keypoints,K_intensities,threshold)
+graph5 = graph_intensityS(superpixels_centroids,S_intensities,threshold)
+```
+
+- **Dominant Color**: constructing a graph based on the similarity of dominant color between nodes.
+
+```python
+graph4 = graph_dominant_colorK(keypoints,K_dominant_colors,threshold)
+graph6 = graph_dominant_colorS(superpixels_centroids,S_dominant_colorss,threshold)
+```
+
+
+
+### Visualization
+
+You can visualize the constructed graph using the `nx.draw` function from the `networkx` library.
+
+```python
+nx.draw(graph)
+plt.show()
+```
+
+## Example Output
+
+To view the outcome of a trial sample containing 100 images, simply execute the `justML.py` code.
 ![image](https://github.com/kianakholousi/projects/assets/44377174/3cdda121-13eb-4477-8d56-e682aeca4020)
 
 sample image 
@@ -51,3 +125,10 @@ results:
 ![Graph5MLacc](https://github.com/kianakholousi/projects/assets/44377174/bcc36b4f-1a8f-45ff-b4cd-f5ae65cf8a91)
 ![Graph6MLacc](https://github.com/kianakholousi/projects/assets/44377174/2565a8ed-0181-4130-9e4e-154126b6dae4)
 
+## Contributing
+
+Contributions to this project are welcome. If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
