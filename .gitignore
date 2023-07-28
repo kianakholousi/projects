@@ -114,6 +114,7 @@ venv.bak/
 *.war
 *.ear
 *.nar
+.settings/*
 hs_err_pid*
 replay_pid*
 
