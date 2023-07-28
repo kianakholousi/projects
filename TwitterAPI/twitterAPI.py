@@ -1,4 +1,4 @@
-# recuerments
+# requirements
 import tweepy as tw
 # API keys
 consumer_key = 'XXXXXXXXXXXXXXXX'
@@ -124,8 +124,3 @@ users = client.get_liking_users(id="1545437932353380354")
 for user in users:
     print(user)
     fo.write(str(user)+'\n')
-
-
-
-
-
